@@ -1,0 +1,42 @@
+<html>
+<title>
+MY EXAMPLE
+</title>
+<body>
+<h1>WELCOME TO GIT HUB!</h1><br>
+<img src="C:\Users\Dell\Desktop\download.png"/><br>
+<label>YOUR NAME:</label> <input id="name"/><br>
+<label>YOUR GENDER:
+<select id="gender">
+  <option id="Male">Male</option>
+  <option id="Female">Female</option>
+<input type="submit" onclick="show()"/>
+<script>
+ function show()
+{
+  var name= document.getElementById("name").value;
+ // var gender=document.getElementById("gender").value;
+  var genderArray=document.getElementById("gender");
+  var selectedIndex=genderArray.selectedIndex;
+  var gender=genderArray[selectedIndex].value;
+ console.log('genderArray='+JSON.stringify(genderArray));
+console.log('selectedIndex='+selectedIndex);
+console.log('gender='+gender);
+  var message='';
+  if(gender==='Male'){
+             message='Hello Mr. '+name;
+          }
+  else if(gender==='Female')
+          {
+             message='Hello Miss.'+name;
+          }
+  else  
+          {
+            message='Hello '+name;
+          }      
+  console.log(name);
+  alert(message);
+}
+</script>
+</body>
+</html>
